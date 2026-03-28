@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { Bus, Booking, BookingRequest, SearchParams, Route } from '../types';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://192.168.1.5:5000/api';
-
+const API_BASE_URL = 'https://ticketbooking-sgcd.onrender.com/api';
 const api = axios.create({
   baseURL: API_BASE_URL,
   timeout: 10000,
