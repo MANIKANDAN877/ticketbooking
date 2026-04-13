@@ -22,6 +22,52 @@ const BusSearch: React.FC<BusSearchProps> = ({ onBookingComplete }) => {
 
   // Available cities from sample data
   const availableCities = [
+    // Tamil Nadu Cities
+    'Chennai',
+    'Nagercoil',
+    'Thiruchy',
+    'Coimbatore',
+    'Madurai',
+    'Salem',
+    'Tirupur',
+    'Tirunelveli',
+    'Thanjavur',
+    'Erode',
+    'Vellore',
+    'Trichy',
+    'Kanchipuram',
+    'Tiruvannamalai',
+    'Dindigul',
+    'Cuddalore',
+    'Ramanathapuram',
+    'Sivakasi',
+    'Karur',
+    'Nagapattinam',
+    'Dharmapuri',
+    'Ariyalur',
+    'Perambalur',
+    'Pudukkottai',
+    'Krishnagiri',
+    'Namakkal',
+    'Theni',
+    'Virudhunagar',
+    'Kallakurichi',
+    'Udumalpettai',
+    'Mayiladuthurai',
+    'Ramanathapuram',
+    'Paramakudi',
+    'Pattukottai',
+    'Tiruppathur',
+    'Sankagiri',
+    
+    // Major Cities (for convenience)
+    'Chennai',
+    'Coimbatore',
+    'Madurai',
+    'Tiruchy',
+    'Salem',
+    
+    // Keep some original cities for variety
     'New York',
     'Boston', 
     'Washington DC',
@@ -165,7 +211,6 @@ const BusSearch: React.FC<BusSearchProps> = ({ onBookingComplete }) => {
                   value={searchParams.origin}
                   onChange={(e) => setSearchParams({ ...searchParams, origin: e.target.value })}
                   className="w-full px-2 sm:px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                  placeholder="Enter origin city"
                   list="origin-cities"
                 />
                 <datalist id="origin-cities">
@@ -221,38 +266,52 @@ const BusSearch: React.FC<BusSearchProps> = ({ onBookingComplete }) => {
         {/* Route Schedule */}
         <div className="xl:col-span-1">
           <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
-            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">📅 April 2026 Schedule</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">� Tamil Nadu Bus Routes</h3>
             <div className="space-y-2 sm:space-y-3">
               <div className="border-l-4 border-blue-500 pl-2 sm:pl-3">
-                <p className="font-semibold text-xs sm:text-sm">April 1</p>
-                <p className="text-xs text-gray-600">New York → Boston (2 buses)</p>
+                <p className="font-semibold text-xs sm:text-sm">Chennai → Nagercoil</p>
+                <p className="text-xs text-gray-600">Daily service, 3h 30m journey</p>
               </div>
               <div className="border-l-4 border-green-500 pl-2 sm:pl-3">
-                <p className="font-semibold text-xs sm:text-sm">April 2</p>
-                <p className="text-xs text-gray-600">New York → Washington DC (2 buses)</p>
+                <p className="font-semibold text-xs sm:text-sm">Chennai → Thiruchy</p>
+                <p className="text-xs text-gray-600">Multiple daily services, 5h 45m journey</p>
               </div>
               <div className="border-l-4 border-purple-500 pl-2 sm:pl-3">
-                <p className="font-semibold text-xs sm:text-sm">April 3</p>
-                <p className="text-xs text-gray-600">Boston → Philadelphia (1 bus)</p>
+                <p className="font-semibold text-xs sm:text-sm">Nagercoil → Thiruchy</p>
+                <p className="text-xs text-gray-600">Daily service, 4h 15m journey</p>
               </div>
               <div className="border-l-4 border-orange-500 pl-2 sm:pl-3">
-                <p className="font-semibold text-xs sm:text-sm">April 4</p>
-                <p className="text-xs text-gray-600">Los Angeles → San Francisco (1 bus)</p>
+                <p className="font-semibold text-xs sm:text-sm">Chennai → Coimbatore</p>
+                <p className="text-xs text-gray-600">Daily service, 7h 30m journey</p>
               </div>
               <div className="border-l-4 border-red-500 pl-2 sm:pl-3">
-                <p className="font-semibold text-xs sm:text-sm">April 5</p>
-                <p className="text-xs text-gray-600">Chicago → Detroit (1 bus)</p>
+                <p className="font-semibold text-xs sm:text-sm">Thiruchy → Madurai</p>
+                <p className="text-xs text-gray-600">Daily service, 2h 30m journey</p>
               </div>
               <div className="border-l-4 border-indigo-500 pl-2 sm:pl-3">
-                <p className="font-semibold text-xs sm:text-sm">April 6-7</p>
-                <p className="text-xs text-gray-600">Washington DC → Miami (overnight)</p>
+                <p className="font-semibold text-xs sm:text-sm">Coimbatore → Madurai</p>
+                <p className="text-xs text-gray-600">Daily service, 4h 00m journey</p>
+              </div>
+              <div className="border-l-4 border-yellow-500 pl-2 sm:pl-3">
+                <p className="font-semibold text-xs sm:text-sm">Chennai → Salem</p>
+                <p className="text-xs text-gray-600">Daily service, 6h 00m journey</p>
+              </div>
+              <div className="border-l-4 border-pink-500 pl-2 sm:pl-3">
+                <p className="font-semibold text-xs sm:text-sm">Salem → Thiruchy</p>
+                <p className="text-xs text-gray-600">Daily service, 3h 00m journey</p>
               </div>
             </div>
             <div className="mt-3 sm:mt-4 p-2 sm:p-3 bg-gray-50 rounded-lg">
-              <p className="text-xs text-gray-700">
+              <p className="text-xs sm:text-sm text-gray-700">
+                <strong>🎯 Available Cities:</strong> Chennai, Nagercoil, Thiruchy, Coimbatore, Madurai, Salem, and many more Tamil Nadu cities
+              </p>
+              <p className="text-xs sm:text-sm text-gray-700 mt-2">
+                <strong>📅 Any Date:</strong> Choose any travel date - no restrictions!
+              </p>
+              <p className="text-xs sm:text-sm text-gray-700">
                 <strong>💰 Payment:</strong> Cash only during journey
               </p>
-              <p className="text-xs text-gray-700">
+              <p className="text-xs sm:text-sm text-gray-700">
                 <strong>🕐 Arrival:</strong> 15 minutes before departure
               </p>
             </div>
